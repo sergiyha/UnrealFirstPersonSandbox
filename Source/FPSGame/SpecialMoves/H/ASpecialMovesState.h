@@ -1,10 +1,18 @@
 ﻿#pragma once
+#include "StateMachine/H/AState.h"
 
-class ASpecialMovesState
+enum SpecialMoves
+{
+	WallRun,
+	DashState
+};
+
+class ASpecialMovesState : public AState
 {
 public:
-	//virtual ~ASpecialMovesState() = default;
-	//virtual void EndState(ASpecialMovesState* fromState) ;
-	virtual void StartState(ASpecialMovesState* fromState) =0;
-	//virtual bool CanSwitchTheState() ;
+	virtual void EndState(int fromState) override =0;
+	virtual void StartState(int fromState) override =0;
+	virtual bool CanSwitchTheState() override =0;
+protected:
+	SpecialMoves GetState(int index);
 };

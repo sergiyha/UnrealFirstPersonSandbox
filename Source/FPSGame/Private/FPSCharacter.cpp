@@ -112,11 +112,6 @@ void AFPSCharacter::DashPhysics(float deltatime)
 
 void AFPSCharacter::Jump()
 {
-	WallRunState wrs;
-	ASpecialMovesState& asms = wrs;
-	wrs.StartState(nullptr);
-
-
 	if (isWallRunning)
 	{
 		FVector launchVector = lastWallNormal;

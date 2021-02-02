@@ -1,7 +1,18 @@
 ﻿#include "SpecialMoves/H/WallRunState.h"
+#include "SpecialMoves/H/DashState.h"
 
-//void WallRunState::StartState(ASpecialMovesState* fromState) 
-//{
-//	UE_LOG(LogTemp, Error, TEXT("Wall State"));
-//	//ASpecialMovesState::StartState(fromState);
-//}
+bool WallRunState::CanSwitchTheState()
+{
+	return false;
+}
+
+void WallRunState::EndState(int fromState)
+{
+	
+}
+
+void WallRunState::StartState(int fromState)
+{
+	auto state = GetState(fromState);
+	
+}

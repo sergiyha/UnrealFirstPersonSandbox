@@ -1,8 +1,7 @@
 ﻿#include "SpecialMoves/H/ASpecialMovesState.h"
 
-#include "SpecialMoves/H/WallRunState.h"
-
-void ASpecialMovesState::StartState(ASpecialMovesState* fromState)
+SpecialMoves ASpecialMovesState::GetState(int index)
 {
-	UE_LOG(LogTemp, Error, TEXT("ASpecial State"));
+	return static_cast<SpecialMoves>(index);
 }
+
